@@ -31,9 +31,9 @@ require("lazy").setup({
 
   { 
     "nvim-lualine/lualine.nvim", -- 状态栏
-    dependencies = { 
-      'lightmon233/nvim-web-devicons-lualine', optional = true -- 状态栏图标，状态栏的依赖, 可选包
-    }
+    -- dependencies = { 
+    --   'lightmon233/nvim-web-devicons-lualine', optional = true -- 状态栏图标，状态栏的依赖, 可选包
+    -- }
   },
 
   {
