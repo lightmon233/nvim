@@ -9,6 +9,7 @@
 
 -- 最先调用
 require("plugins.lazy-nvim")
+require("plugins.onedark")
 
 -- 配置
 require("core.options") -- 实际上应该是"lua.core.options", 但是lua可以省略

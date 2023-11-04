@@ -27,7 +27,7 @@ require("lazy").setup({
   -- { "folke/neoconf.nvim", cmd = "Neoconf" },
   -- "folke/neodev.nvim",
 
-  "folke/tokyonight.nvim", -- 主题
+  "navarasu/onedark.nvim", -- 主题
 
   { 
     "nvim-lualine/lualine.nvim", -- 状态栏
