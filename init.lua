@@ -7,8 +7,16 @@
 -- 如果还是找不到，它会尝试查找与模块名相同的 C 程序库。
 -- 这种搜索规则使得可以直接使用模块名来加载对应的 Lua 模块，而无需显式指定文件夹目录路径和扩展名。
 
+if vim.g.neovide then
+    vim.o.guifont = "MesloLGL Nerd Font:h12:b"
+    vim.g.neovide_floating_blur_amount_x = 2.0
+    vim.g.neovide_floating_blur_amount_y = 2.0
+    vim.g.neovide_transparency = 0.9
+end
+
 -- 最先调用
 require("plugins.lazy-nvim")
+require("plugins.onedark")
 
 -- 配置
 require("core.options") -- 实际上应该是"lua.core.options", 但是lua可以省略
@@ -25,4 +33,6 @@ require("plugins/autopairs")
 require("plugins/bufferline")
 require("plugins/gitsigns")
 require("plugins/telescope")
-
+require("plugins/copilot")
+require("plugins/indent-blankline")
+require("plugins/ufo")

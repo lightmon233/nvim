@@ -27,7 +27,7 @@ require("lazy").setup({
   -- { "folke/neoconf.nvim", cmd = "Neoconf" },
   -- "folke/neodev.nvim",
 
-  "folke/tokyonight.nvim", -- 主题
+  "navarasu/onedark.nvim", -- 主题
 
   { 
     "nvim-lualine/lualine.nvim", -- 状态栏
@@ -70,5 +70,34 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim", tag = "0.1.1",  -- 文件检索
     dependencies = { {'nvim-lua/plenary.nvim'} } -- 也可以{}
-  }
+  },
+
+    -- Github Copilot
+    "github/copilot.vim",
+
+    -- Indent Blankline
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {}
+    },
+
+    -- fold 
+    'kevinhwang91/promise-async',
+    {
+        "kevinhwang91/nvim-ufo",
+        requires = 'kevinhwang91/promise-async',
+        run = ':TSUpdate'
+    },
+
+    -- rainbow
+    'hiphish/rainbow-delimiters.nvim',
+
+    -- markdown preview
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    }
 })

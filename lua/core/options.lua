@@ -5,13 +5,13 @@ opt.relativenumber = false -- 显示的行号变为行号偏移值
 opt.number = true
 
 -- 缩进
-opt.tabstop = 2
-opt.shiftwidth = 2 -- 使用`>>`或者`<<`命令时的缩进格数
+opt.tabstop = 4
+opt.shiftwidth = 4 -- 使用`>>`或者`<<`命令时的缩进格数
 opt.expandtab = true -- 执行<Tab>时实际插入了空格而不是制表符
 opt.autoindent = true -- 换行自动缩进
 
 -- 防止包裹
-opt.wrap = false -- 文本行数超出时自动换行
+opt.wrap = true -- 文本行数超出时自动换行
 
 -- 光标行
 opt.cursorline = true -- 光标所在行高亮显示
@@ -33,6 +33,5 @@ opt.smartcase = true -- 有大写字母时敏感
 -- 外观
 opt.termguicolors = true -- 真彩色
 opt.signcolumn = "yes" -- 使用符号列
-vim.cmd[[colorscheme tokyonight-moon]] -- 调用vim命令 更换颜色主题
 
 
