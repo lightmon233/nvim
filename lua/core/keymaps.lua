@@ -49,12 +49,12 @@ keymap.set("n", "<C-H>", ":bprevious<CR>")
 -- 插件
 ---- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
-keymap.set("n", "<F5>", ":!g++ main.cpp -o main && ./main < input.txt > output.txt<CR>")
+keymap.set("n", "<F5>", ":!g++ main.cpp -o main && cmd /c .\\main.exe < input.txt > output.txt<CR>")
 
 keymap.set("n", "<leader>tp", [[:lua loadTemplate()<CR>]], { noremap = true, silent = true })
 
 function loadTemplate()
-    local template_path = vim.fn.expand("~/.config/nvim/template.cpp")
+    local template_path = vim.fn.expand("~/AppData/Local/nvim/template.cpp")
     if vim.fn.filereadable(template_path) == 1 then
         local template_content = vim.fn.readfile(template_path)
         local current_line = vim.fn.line('.')
