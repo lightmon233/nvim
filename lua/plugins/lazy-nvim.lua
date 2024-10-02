@@ -99,5 +99,8 @@ require("lazy").setup({
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
-    }
+    },
+
+    -- built-in terminal
+    {'akinsho/toggleterm.nvim', version = "*", config = true}
 })
