@@ -17,14 +17,7 @@ require("mason-lspconfig").setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").lua_ls.setup {
-  capabilities = capabilities,
-}
-
-require("lspconfig").clangd.setup {
-}
-
-require("lspconfig").bashls.setup {
-
-}
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('clangd')
+vim.lsp.enable('bashls')
 

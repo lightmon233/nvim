@@ -47,8 +47,6 @@ require("lazy").setup({
 
   "nvim-treesitter/nvim-treesitter", -- 语法高亮
 
-  "p00f/nvim-ts-rainbow", -- 配合treesitter，不同括号颜色区分
-
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
   "neovim/nvim-lspconfig",
