@@ -3,6 +3,6 @@ require'nvim-treesitter'.setup {
   install_dir = vim.fn.stdpath('data') .. '/site'
 }
 
-require'nvim-treesitter'.install {
-    'vim', 'vimdoc', 'bash', 'c', 'cpp', 'javascript', 'json', 'lua', 'python', 'typescript', 'tsx', 'css', 'rust', 'markdown', 'markdown_inline'
-}
+-- require'nvim-treesitter'.install {
+--     'vim', 'vimdoc', 'bash', 'c', 'cpp', 'javascript', 'json', 'lua', 'python', 'typescript', 'tsx', 'css', 'rust', 'markdown', 'markdown_inline'
+-- }

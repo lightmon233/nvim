@@ -5,8 +5,8 @@ opt.relativenumber = false -- 显示的行号变为行号偏移值
 opt.number = true
 
 -- 缩进
-opt.tabstop = 4
-opt.shiftwidth = 4 -- 使用`>>`或者`<<`命令时的缩进格数
+opt.tabstop = 2
+opt.shiftwidth = 2 -- 使用`>>`或者`<<`命令时的缩进格数
 opt.expandtab = true -- 执行<Tab>时实际插入了空格而不是制表符
 opt.autoindent = true -- 换行自动缩进
 
