@@ -88,8 +88,12 @@ require("lazy").setup({
         run = ':TSUpdate'
     },
 
-    -- rainbow
-    'hiphish/rainbow-delimiters.nvim',
+    {
+      -- rainbow
+      'hiphish/rainbow-delimiters.nvim',
+      event = { "BufReadPost", "BufNewFile" },
+      dependencies = { 'nvim-treesitter/nvim-treesitter'}
+    },
 
     -- render markdown
     {
