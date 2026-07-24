@@ -22,6 +22,21 @@ opt.mouse:append("a") -- mouse是一个table, append是往这个table中加参�
 -- 系统剪贴板
 opt.clipboard:append("unnamedplus")
 
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = "win32yank-wsl",
+    copy = {
+      ["+"] = "win32yank.exe -i --crlf",
+      ["*"] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+      ["+"] = "win32yank.exe -o --lf",
+      ["*"] = "win32yank.exe -o --lf",
+    },
+    cache_enabled = 0
+  }
+end
+
 -- 默认新窗口右和下
 opt.splitright = true
 opt.splitbelow = true
