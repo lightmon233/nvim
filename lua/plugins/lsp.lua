@@ -1,4 +1,4 @@
-local is_nixos = vim.fn.filereadable("/etc/NIXOSS") == 1
+local is_nixos = vim.fn.filereadable("/etc/NIXOS") == 1
 
 if not is_nixos then
 require("mason").setup({
