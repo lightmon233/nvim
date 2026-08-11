@@ -1,3 +1,6 @@
+local is_nixos = vim.fn.filereadable("/etc/NIXOSS") == 1
+
+if not is_nixos then
 require("mason").setup({
   ui = {
       icons = {
@@ -14,6 +17,7 @@ require("mason-lspconfig").setup({
     "lua_ls", "clangd", "bashls", "vtsls"
   },
 })
+end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

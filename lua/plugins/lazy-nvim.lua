@@ -19,6 +19,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Check if is NisOS
+local is_nixos = vim.fn.filereadable("/etc/NIXOS") == 1
+
 -- Example using a list of specs with the default options
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
@@ -47,8 +50,15 @@ require("lazy").setup({
 
   "nvim-treesitter/nvim-treesitter", -- 语法高亮
 
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",  -- 这个相当于mason.nvim和lspconfig的桥梁
+  {
+    "williamboman/mason.nvim",
+    enabled = not is_nixos
+  },
+  -- 这个相当于mason.nvim和lspconfig的桥梁
+  {
+    "williamboman/mason-lspconfig.nvim",
+    enabled = not is_nixos
+  },
   "neovim/nvim-lspconfig",
 
   -- 自动补全
