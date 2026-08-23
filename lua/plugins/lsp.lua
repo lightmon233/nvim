@@ -14,7 +14,7 @@ require("mason").setup({
 require("mason-lspconfig").setup({
   -- 确保安装，根据需要填写
   ensure_installed = {
-    "lua_ls", "clangd", "bashls", "vtsls"
+    "lua_ls", "clangd", "bashls", "vtsls", "nil_ls"
   },
 })
 end
@@ -25,4 +25,4 @@ vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('bashls')
 vim.lsp.enable('vtsls')
-
+vim.lsp.enable('nil_ls')
